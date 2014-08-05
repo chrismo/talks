@@ -231,7 +231,7 @@ in doing it this way. Ending many days with defeat.
 .one-big[
 (1) Write first crap that comes to mind<br/>
 (2) <strike>Attain Ideal</strike> #SHIPIT<br/>
-(3) Profit!<br/>
+(3) Profit???<br/>
 (4) Bear the shame of being slain by yaks
 ]
 ???
@@ -280,7 +280,7 @@ But I think it's important to understand this conflict and bear it in mind,
 
 .center.two-big[“So what do you think we should do?”]
 --
-.center.two-big[“Well, we should have smaller services.”]
+.center.two-big[“Well, I guess we should break up our services.”]
 
 ---
 
