@@ -26,6 +26,13 @@ Who am I?
 Also wanted to do this talk since it's been on my mind recently and sort
 of guinea pig it for you. I'd love feedback on it, it's still a bit 
 rough around the edges.
+
+Thoughts on summing up:
+In Search of Elegance
+
+- Problem: Corrosive Effects. Help: See These Effects and Don't Mistake These for a Proper Critique of the Thing
+- Problem: Confusion between Ideals and Pragmatism. Help: Call these out.
+- Problem: Conflict. Help: Dig deep to find agreements, and work for a culture of Freedom.
 ---
 
 # Elegant Code
