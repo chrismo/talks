@@ -27,18 +27,6 @@ Also wanted to do this talk since it's been on my mind recently and sort
 of guinea pig it for you. I'd love feedback on it, it's still a bit 
 rough around the edges.
 
-Thoughts on summing up:
-In Search of Elegance
-
-- Problem: Corrosive Effects. Help: See These Effects and Don't Mistake These for a Proper Critique of the Thing
-- Problem: Confusion between Ideals and Pragmatism. Help: Call these out.
-- Problem: Conflict. Help: Dig deep to find agreements, and work for a culture of Freedom.
-
-Fowler - been there done that - http://martinfowler.com/bliki/FaultyTechniqueDichotomy.html
-                                
-"The problem with any report of a faulty technique is to figure out if the technique itself is faulty, or 
-whether the application of the technique was faulty."
-
 ---
 
 # Elegant Code
@@ -508,7 +496,7 @@ class: center, middle
 So what about you? Have you been on either side, or another side altogether
  in a debate, or in a situation where you simply did not feel you had room
  to put your two cents in?
- 
+
 If so, I encourage you to enter into the conversation. If your particular
  conversation is not safe, then obviously use your best judgment, but a portion
  of this talk wouldn't even exist had it not been for my co-worker saying
@@ -549,3 +537,17 @@ So, thanks!
 .center.two-big[Chris Morris<br/>@the_chrismo | cLabs.org]
 ???
 If you have any feedback for me on anything, I'd love to hear it. 
+
+
+
+Thoughts on summing up:
+In Search of Elegance
+
+- Problem: Corrosive Effects. Help: See These Effects and Don't Mistake These for a Proper Critique of the Thing
+- Problem: Confusion between Ideals and Pragmatism. Help: Call these out.
+- Problem: Conflict. Help: Dig deep to find agreements, and work for a culture of Freedom.
+
+Fowler - been there done that - http://martinfowler.com/bliki/FaultyTechniqueDichotomy.html
+
+"The problem with any report of a faulty technique is to figure out if the technique itself is faulty, or
+whether the application of the technique was faulty."
