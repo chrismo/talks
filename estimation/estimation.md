@@ -2,8 +2,18 @@
 
 .center[<img src="http://imagery.pragprog.com/products/323/jkthp.jpg" style="width: 50%;" />]
 
+http://33.media.tumblr.com/3a67e4ea496cbad39b23bf48e046c810/tumblr_nasiplAH851qhu3vxo1_500.gif
+@sara!!
+
 ???
 Couple of shout-outs before i start...
+
+"Read this book so you don't die in your chair."
+
+
+TODO: include this Dilbert? :
+https://pbs.twimg.com/media/B9oQwNrIYAAqrw8.jpg
+
 ---
 
 # Depression
@@ -18,30 +28,6 @@ Couple of shout-outs before i start...
 Devpressed support forum. I myself don't suffer from depression but my wife does.
 
 If you or someone you know also suffers with it, or you'd just like to learn more about it, it's a good resource.
-
----
-
-???
-And since it's superbowl week, in the spirit of the great sporting event, I offered up some advertising space
-in my talk,
-
----
-
-layout: true
-class: center, top
-
----
-
-# Paid Advertisement
-
-### http://bit.ly/i-wish-that-i-had-jessies-link
-
-.center[<img src="jessie.link.youtube.png" style="width: 75%"/>]
-
-???
-Jessie Link was the highest bidder. If you click this link and watch the YouTube video, along with 299 of your best
-friends, then Jessie will win some free stuff. ... Oh, correction. She'll be entered _into a drawing_ to win free stuff.
-So ... I think the lesson here is, gullible people still fall for the ol' interviewed-with-a-microphone trick.
 
 ---
 
