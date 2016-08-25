@@ -1,0 +1,6 @@
+Gemfile requirement is best control over resolution.
+
+The old-school `bundle install` conservative updating and the --source hack all comes down to this:
+- name it and claim it if you care about it moving.
+- https://github.com/chrismo/bundler-source-hack#why-then-does-the-hack-sometimes-not-work
+- https://github.com/bundler/bundler/issues/4690#issuecomment-227252419: "If you want bar to stay put, you gotta declare it as a dependency in the Gemfile"
