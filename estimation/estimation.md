@@ -2,14 +2,12 @@
 
 .center[<img src="http://imagery.pragprog.com/products/323/jkthp.jpg" style="width: 50%;" />]
 
-http://33.media.tumblr.com/3a67e4ea496cbad39b23bf48e046c810/tumblr_nasiplAH851qhu3vxo1_500.gif
-@sara!!
-
 ???
 Couple of shout-outs before i start...
 
 "Read this book so you don't die in your chair."
 
+HT: @sara - http://33.media.tumblr.com/3a67e4ea496cbad39b23bf48e046c810/tumblr_nasiplAH851qhu3vxo1_500.gif
 
 TODO: include this Dilbert? :
 https://pbs.twimg.com/media/B9oQwNrIYAAqrw8.jpg
