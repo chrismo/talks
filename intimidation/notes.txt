@@ -1,0 +1,7 @@
+https://twitter.com/bhalp1/status/578925947245633536
+
+Sometimes when I'm writing Javascript I want to throw up my hands and say "this is bullshit!" but I can never remember what "this" refers to
+
+https://twitter.com/_minego/status/579022537637511168
+
+@bhalp1 @funkatron Just make sure you have a line that says "var that = this;" first then you can say "that is bullshit!". Works every time.

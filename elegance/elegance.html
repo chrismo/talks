@@ -53,8 +53,23 @@
     </style>
 </head>
 <body>
-<textarea id="source">layout: true
+<textarea id="source"># Healthy Programmer
 
+.center[<img src="http://imagery.pragprog.com/products/323/jkthp.jpg" style="width: 50%;" />]
+
+---
+
+# Depression
+
+.center.one-big[Greg Baugues http://blog.baugues.com/depression]
+
+---
+
+.center.one-big[<img src="http://cdn1.moneysavingmom.com/wp-content/uploads/2014/02/LivingSocial-Logo.jpg" style="width: 90%;" />]
+
+---
+
+layout: true
 class: center, middle
 
 ---
@@ -63,19 +78,20 @@ class: center, middle
 ???
 Who am I?
 
-Thanks for feedback
-
 Also wanted to do this talk since it's been on my mind recently and sort
 of guinea pig it for you. I'd love feedback on it, it's still a bit 
 rough around the edges.
+
 ---
 
 # Elegant Code
-
+???
+What is Elegance? Steve Klabnik's philosophy in the time of software. 
 ---
 
 ## Win/Win
-
+???
+My own definition.
 ---
 
 layout: false
@@ -147,7 +163,7 @@ Language-level, process, frameworks, QA technique
 
 class: center, middle
 
-# Is #IsTDDDead Dead Yet?!
+# Isn't #IsTDDDead Dead?!
 ???
 I don't intend to get into this debate
 
@@ -165,7 +181,7 @@ community come to bear.
 
 Personal
 
-Maroon
+Marooned -> mocks example. But don't blame the idea for the marooned.
 
 Process -> end of the day, any conscientious developer wants to reflect on
 their work and judge its value.
@@ -184,12 +200,12 @@ class: center, top
 --
 .center.one-big[Means over End]
 ???
-All of these groups are just variations on people mistaking the means
-for the end.
+All of these Corrosive Effects are just variations on people mistaking 
+the means for the end.
 
 But it can be difficult to judge, especially once something is into
 or past the adoption phase and there's a LOT of activity around it, 
-are we seeing corruption of an elegant solution, or is the supposed 
+are we seeing corruption of an elegant idea, or is the supposed 
 elegant solution inherently problematic .
 
 ---
@@ -271,7 +287,7 @@ in doing it this way. Ending many days with defeat.
 .one-big[
 (1) Write first crap that comes to mind<br/>
 (2) <strike>Attain Ideal</strike> #SHIPIT<br/>
-(3) Profit!<br/>
+(3) Profit???<br/>
 (4) Bear the shame of being slain by yaks
 ]
 ???
@@ -320,7 +336,7 @@ But I think it's important to understand this conflict and bear it in mind,
 
 .center.two-big[“So what do you think we should do?”]
 --
-.center.two-big[“Well, we should have smaller services.”]
+.center.two-big[“Well, I guess we should break up our services.”]
 
 ---
 
@@ -397,9 +413,30 @@ class: center, middle, inverse
 
 ![Segway Crash](http://i817.photobucket.com/albums/zz94/overkillphil/segway_crash.jpg)
 ???
-And now for something completely different. Sort of. A semi-related bonus track
-if you will.
+I no longer have an awkward segue, but that slide's too awesome.
 
+---
+
+# In Search of Elegance
+???
+So far, we've looked at two general problems. 
+
+--
+.center.three-big[Corrosive Effects]
+--
+.center.three-big[The Problem of Pragmatism]
+???
+But I want to tack on a 3rd problem. 
+--
+.center.three-big[Resistance]
+
+---
+
+# Conflict Resolution
+
+.center.one-big.remark-code[Deadlock found when trying to get lock; try restarting transaction]
+???
+And as an example to play with, we go back to ...
 ---
 
 class: center, middle
@@ -483,10 +520,10 @@ class: center, middle
 ???
 A friend of mine at the RailsConf keynote felt a bit vindicated by DHH's 
 statements, and at a recent lunch here in 
-Dallas, Chris mentioned he had a similar reaction as he doesn't have
-the same depth of experience on the subject that others like myself do and at
- times during rants about DHH in Campfire didn't 
- necessarily feel comfortable to speak up and share their experiences. 
+Dallas, one of the other engineers mentioned he had a similar reaction as he 
+doesn't have the same depth of experience on the subject that others like myself 
+do and at times during rants about DHH in Campfire didn't necessarily feel 
+comfortable to speak up and share his experiences. 
 
 Which quickly led me back to   
   
@@ -500,10 +537,10 @@ I have no shortage of confidence on this subject and am quickly frustrated by
 DHH because I don't believe he knows his history very well and jumps to  
 conclusions that don't appear to me to be very thoughtful. 
  
-And yet my confidence and frustration can be a wall for someone like Chris 
-and those DHH mentioned who may not always feel welcome to share their 
-struggles or differences of opinion, and being confronted
-with that can see how I would contribute negatively to that.
+And yet I see how my own rants can steal space from the conversation for others 
+like those DHH mentioned who may not always feel welcome to share their 
+struggles or differences of opinion, and being confronted with that can see 
+how I would contribute negatively to that.
 
 ---
 
@@ -511,10 +548,21 @@ class: center, middle
 
 # You?
 ???
-If any of you watching have had similar experiences, I would love to hear from
-you, or, if you felt comfortable, would love to hear about it in
-Campfire so we could all talk about it together.
+So what about you? Have you been on either side, or another side altogether
+ in a debate, or in a situation where you simply did not feel you had room
+ to put your two cents in?
+
+If so, I encourage you to enter into the conversation. If your particular
+ conversation is not safe, then obviously use your best judgment, but a portion
+ of this talk wouldn't even exist had it not been for my co-worker saying
+ something to me about the TDD thing at that lunch.
  
+---
+
+class: center, middle
+
+# Common Ground
+???
 Because what's fascinating to me when looking at what drove Kent to promote
 TDD in the first place, and what drove DHH to call out TDD recently was the
 SAME THING - a desire to feel confident and to feel free in expressing 
@@ -528,34 +576,37 @@ class: center, middle
 
 # Culture
 ???
-Our culture matters, and Sara started a post in our starter-kit repo
-on our engineering group culture and I believe strongly in working to
+Our culture matters, I believe strongly in working to
 have a culture of open and honest communication. The best people I've been
 privileged to work with have always been humble, owning up to what they don't
-know and open to hearing from others. That's what I strive for, though I 
-frequently fail to attain it. 
+know and open to hearing from others. That's what I strive for, even though
+sometimes my own mouth gets in the way. 
  
-So, thanks! That's it for the talk.
+So, thanks! 
  
 ---
-
-class: center, middle
 
 # Thanks!!
-???
-Big thanks to Tyler and Natalia and anyone else who's helped make these
- talks possible, I think it's awesome we're taking time to do these.
- Also thanks to anyone waiting on me to 
-do some Payments work for them.
- 
- 
----
 
-class: center, middle
-
-# Feedback
+.center.two-big[LivingSocial&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dallas.rb]
+.center.two-big[Chris Morris<br/>@the_chrismo | cLabs.org]
 ???
 If you have any feedback for me on anything, I'd love to hear it. 
+
+
+
+Thoughts on summing up:
+In Search of Elegance
+
+- Problem: Corrosive Effects. Help: See These Effects and Don't Mistake These for a Proper Critique of the Thing
+- Problem: Confusion between Ideals and Pragmatism. Help: Call these out.
+- Problem: Conflict. Help: Dig deep to find agreements, and work for a culture of Freedom.
+
+Fowler - been there done that - http://martinfowler.com/bliki/FaultyTechniqueDichotomy.html
+
+"The problem with any report of a faulty technique is to figure out if the technique itself is faulty, or
+whether the application of the technique was faulty."
+
 
 </textarea>
 <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
