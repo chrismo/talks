@@ -24,6 +24,7 @@ The old-school `bundle install` conservative updating and the --source hack all 
 - - debug dump of stuff
 - - troubleshooting a resolution problem?
 - - GEM_PATH/GEM_HOME to simulate what bundler does automatically
+- - bundler_bungler
 - rubytogether
 - realcodez.com
 
