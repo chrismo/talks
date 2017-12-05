@@ -20,6 +20,7 @@ The old-school `bundle install` conservative updating and the --source hack all 
 - - checksums
 - - bundler/inline
 - - bundle config auto_install
+- - bundle config suppress_install_using_messages
 - - debug dump of stuff
 - - troubleshooting a resolution problem?
 - - GEM_PATH/GEM_HOME to simulate what bundler does automatically
