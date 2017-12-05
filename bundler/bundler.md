@@ -19,6 +19,7 @@ The old-school `bundle install` conservative updating and the --source hack all 
 - - binstubs (rails 4 does this automagically now)
 - - checksums
 - - bundler/inline
+- - bundle config auto_install
 - - debug dump of stuff
 - - troubleshooting a resolution problem?
 - - GEM_PATH/GEM_HOME to simulate what bundler does automatically
