@@ -8,10 +8,12 @@ class: center, middle
 
 -- Talk prepped for Jan 2018 meetup of http://devproductivity.io
 
-My name is Chris Morris, I'm the Director of Engineering at Mystery Science and technically still a core
-team member of Bundler, but I haven't been able to contribute there in a long time.
+My name is Chris Morris, I've been developing software for over 20 years, I'm 
+currently the Director of Engineering at Mystery Science, before that I spent
+6 years at LivingSocial/Groupon and am technically still a core
+team member of Bundler, but I haven't contributed there in a while.
 
-Before we get into my talk today, some shout-outs
+Before we get into my talk today, some shout-outs:
 
 ---
 
@@ -22,14 +24,14 @@ Before we get into my talk today, some shout-outs
 
 ???
 
-This book was published in 2013, so, y'know, like light years ago, but The Healthy Programmer has some 
-wonderfully practical advice for those of us who make a living the way we do.
+This book was published in 2013, so, y'know, like light years ago, but The
+Healthy Programmer has some wonderfully practical advice for those of us who
+make a living the way we do.
 
-In short: "Read this book so you don't die in your chair." Hat tip to my friend Sara Flemming for the gif. 
+In short: "Read this book so you don't die in your chair." Hat tip to my friend
+Sara Flemming for the jeh-gif.
 
-Also, I think we should just start saying Jeh-Gif in the spirit of compromise and unity.
-/ I never know how to say it, so I just say it both ways.
-
+I never know how to say it, so I just say it both ways.
 
 ---
 
@@ -40,8 +42,9 @@ Also, I think we should just start saying Jeh-Gif in the spirit of compromise an
 
 ???
 
-The OSMI support forums evolved out of a site called Devpressed started by Greg Baugues, they can be a 
-great place to get some support for yourself or if know someone who struggles with mental issues.
+The OSMI support forums evolved out of a site called Devpressed started by Greg
+Baugues, they can be a great place to get some support for yourself or if know
+someone who struggles with mental issues.
 
 ---
 
@@ -51,9 +54,9 @@ great place to get some support for yourself or if know someone who struggles wi
 
 ???
 
-Then finally, since this talk will largely be on a process and tactical level, I have to give a shout
-out to the classic Pragmatic Programmer book since a lot of the stuff in my talk is either ripped off
-or inspired by this book.  
+Then finally, since this talk will largely be on a process and tactical level,
+I have to give a shout out to the classic Pragmatic Programmer book since a lot
+of the stuff in my talk is either ripped off from or inspired by this book.
 
 ---
 
@@ -64,9 +67,10 @@ class: center, middle
 
 ???
 
-The idea of a 10x developer can at least be traced back to a 1996 book by Steve McConnell called
-Rapid Development and possibly the 1st edition in 1993 of his book Code Complete, which in turn
-cite earlier studies, the quality of which are easily called into question.   
+The idea of a 10x developer can at least be traced back to a 1996 book by Steve
+McConnell called Rapid Development and possibly the 1st edition in 1993 of his
+book Code Complete, which in turn cite earlier studies, the quality of which
+are easily called into question.
 
 ---
 
@@ -77,14 +81,17 @@ class: center, middle
 
 ???
 
-For a counterpoint view on 10x and other topics, which arose specifically from a critique on Steve
-McConnell's writings.
+For a counterpoint view on 10x and other topics, one resource you can check out
+is The Leprechauns of Software Engineering, which arose specifically from a
+critique on Steve McConnell's writings on the 10x developer.
 
-The 10x developer, or 5x, or 2x, or 1.1x may be a myth, but if they do exist, in my opinion they 
-subsist on small habits that buy themselves
-productivity over the long haul, vs. folks who can just type 10 times as fast as you.
+The 10x developer, or 5x, or 2x, or 1.1x may be a myth, but if they do exist,
+in my opinion they subsist on small habits that buy themselves productivity
+over the long haul, vs. folks who can just type 10 times as fast as you.
 
 ---
+
+class: center, middle
 
 # Trade-Offs
 
@@ -92,8 +99,24 @@ productivity over the long haul, vs. folks who can just type 10 times as fast as
 
 ???
 
-Most experienced developers understand that quality engineering involves trade-offs. Security vs. Convenience,
-code that reads well vs. performs well, and short-term vs. long-term productivity.
+Most experienced developers understand that quality engineering involves
+trade-offs. Security vs. Convenience, code that reads well vs. performs well,
+and short-term vs. long-term productivity.
+
+One of my favorite XKCD comics captures this tension we have to struggle with
+every day.
+
+---
+
+# Small Gains Over Time
+
+.center[<img src="graph.png" style="width: 70%" />]
+
+???
+Every day we have to make these little decisions between manual and
+automated salt, and we'll mess up many of them, but if we're
+consistently weighing out both the short and long term, we can experience
+the multiplicative benefits of solid tooling.     
 
 ---
 
@@ -103,7 +126,7 @@ class: center, middle
 
 ???
 
-The road to hell is paved with misguided compromises and shrug emoji. 
+The road to hell is paved with short-sighted compromises. 
 
 ---
 
@@ -113,7 +136,7 @@ class: center, middle
 
 ???
 
-The road to hellacious productivity is simply paved with better compromises.  
+A better balance of compromise can lead to hellacious productivity.  
 
 ---
 
@@ -127,148 +150,253 @@ Considering the long term impact of our decisions is usually the wiser approach.
 
 ---
 
-# Sometimes You Gotta Ship
+# If You Gotta Ship Fast 
 
 .center[![ShipIt Squirrel](https://qph.ec.quoracdn.net/main-qimg-c8781a4bb1f17e330b50cb35f851da05-c)]
 
 ???
 
-Though sometimes we gotta get stuff out the door. So ... before we go into more detail
-on longer term stuff, we should call out the necessity of shipping. Sometimes Short wins.
+Sometimes we gotta get stuff out the door, and that can get messy 
 
 ---
 
-# Negotiate for the Long 
+# Negotiate Cleanup 
 
-.center[<img src="https://qph.ec.quoracdn.net/main-qimg-c8781a4bb1f17e330b50cb35f851da05-c" style="width: 33%"/>
-        <img src="http://i.telegraph.co.uk/multimedia/archive/03245/ketchupembed_3245375b.jpg" style="width: 33%"/>]
-
-???
-
-But when that happens, be sure to negotiate for time to clean up your mess. So you can 
-have your squirrel and ketchup cake and eat it too.
-
----
-
-class: center, middle
-
-# Testing
+        
+.center[<img src="http://cdn3.momsxyz.com/2015/09/kids-baking-1-1024x629.gif" style="width: 80%" />]        
 
 ???
 
-I'm going to talk a lot about testing. Testing and Design go hand-and-hand really.
-Musicians listen back to their songs, artists and sculptors step back to look over
-their work. 
+But when that happens, be sure to negotiate for time to clean up your mess. So
+you can have your squirrel and ketchup cake and eat it too.
 
 ---
 
 # Testing
 
-Test yo self before yo self.fail!
+.center[<img src="avengers.storyboard.png" style="width: 60%"/>]
 
 ???
 
-Testing is really this larger behavior to help try and get it right the first time to minimize future changes and the associated costs with revisiting work.
-Give yourself the best chance of getting it right the first time AND give yourself the best chance of changing it painlessly in the future. Iteration and feedback are the law of the land … do it in the small in the beginning, do it as you go down the road, too.
+I'm going to talk a lot about testing. Software development may be an 
+unusual field in how segregated the notion of testing is from coding, 
+when in my POV, testing and coding are two sides of the same coin 
+called "Design". 
+
+Composers naturally iterate over their pieces. Artists will do studies, a 
+drawing, sketch or painting in preparation for a finished piece. Writers 
+have editors, directors storyboard their movies. 
+   
+It's all part of an essential feedback loop.
+
+credit: http://screencrush.com/movie-storyboards/
 
 ---
 
-Testing
+# Testing?
 
-dbrady: It's 2018. Do you really think testing is good? All this talk of fast, clean, readable, etc I'm starting to feel like we think testing sucks. Slow, ugly, unreadable all suck. Fast, clean, readable isn't good, just less sucky. Is testing good, or just an accepted evil?
+.big-para[@dbrady: It's 2018. Do you really think testing is good? All this
+talk of fast, clean, readable, etc I'm starting to feel like we think testing
+sucks. Slow, ugly, unreadable all suck. Fast, clean, readable isn't good, just
+less sucky. Is testing good, or just an accepted evil?]
+???
+David Brady tweeted this recently - Do you really think testing is good? ... 
+I'm starting to feel like we think testing sucks. ... Is testing good, or just
+an accepted evil? 
 
-the_chrismo
-@dbrady @alexford Tests help me think about and even shape the design of my production code. Built-in rubber duck. /me is happy :)
-Jan 11, 2018, 4:50 PM
+https://twitter.com/dbrady/status/951546028079091712
+--
+
+.big-para[@the_chrismo:
+Tests help me think about and even shape the design of my production code. 
+Built-in rubber duck. /me is happy :)]
+
+???
+I replied that Tests help me think about and even shape the design of my
+production code. It has a built-in rubber duck effect.
+
 https://twitter.com/the_chrismo/status/951587076138442752
 
-dbrady
-@the_chrismo @alexford THIS is literally the first reply all day that proposes an intrinsic benefit of testing rather than an investment/cost to be minimized and/or whose eventual payoff is hoped to be maximized
-Jan 11, 2018, 5:02 PM
+dbrady @the_chrismo @alexford THIS is literally the first reply all day that
+proposes an intrinsic benefit of testing rather than an investment/cost to be
+minimized and/or whose eventual payoff is hoped to be maximized Jan 11, 2018,
+5:02 PM
+
+---
+
+# Testing!
+
+.center.one-big[Test yo self before yo self.fail!]
+
+???
+
+David's tweet isn't surprising to me, and not just because I see it in
+others who may not understand how great it is that we can take it for
+granted these days, but because I still see this in myself. Sometimes, 
+in the NAME of productivity, it can be tempting to skimp on testing. 
+
+But - the sooner we can understand what we're building, the sooner
+we can catch misunderstandings, the cheaper it is and therefore the more 
+productive 
+we are. We can't do that without many of the feedback tools we use, 
+testing being a powerful one. 
+
+---
+
+# Two Clients for All Code
+
+???
+One of the most prevalent killers in software is tight coupling. 
 
 ---
 
 # Test Suite as Deploy Checklist
 
-A tiny robot QA army. “I wrote it down in my diary so I wouldn’t have to remember!” - https://memegenerator.net/img/instances/67492661/i-wrote-them-down-in-my-diary-so-that-i-wouldnt-have-to-remember.jpg
+.center[<img src="https://memegenerator.net/img/instances/67492661/i-wrote-them-down-in-my-diary-so-that-i-wouldnt-have-to-remember.jpg" style="width: 100%" />]
 
 ???
-Tests serve as this long term sentry to help you remember all the things you wrote. Checklists are a powerful tool used in aviation and medicine. Our test suites are a huge, automated pre-deploy checklist.
+In addition to feedback during development of new code, re-running our tests
+can protect previously developed code.
+
+Checklists are a powerful tool used in aviation and medicine to avoid mental
+errors and making sure things are working before flying away from the ground or 
+cutting open a patient. 
+
+Our test suites are a huge, automated pre-deploy checklist.
 
 ---
 
-# Tap the Breaks
+# Speed: Tap the Brakes
 
-_fast and furious_
-
-???
-
-Don't be obsessed with the speediness of your test suite. It can lead to over-mocking and other
-short cuts which diminish the quality of your tests. 
-
----
-
-# Alternative to Not-As-Fast-As-I-Want Tests
-
-the_chrismo
-@dbrady One alternative is a separate QA dept that's under-resourced on time and people and you have to wait 3+ weeks to get shrug-percent coverage.
-Jan 11, 2018, 4:47 PM
-
----
-
-# Likewise, maybe Integrate and Skimp on Units
+.center[<img src="http://mealsandmiles.com/wp-content/uploads/2015/07/fast-furious-poster-big-new-fast-furious-7-poster-brings-the-awesome-previous-6-posters-bring-the-sad-682x1024.jpeg" style="width: 33%" />]
 
 ???
 
-Since quality is the goal, then maybe fewer tests that are more integrated are better than lots 
-of unit tests. 
+I did just say "huge" - and this transitions us to one common problem with
+test suites: they just run so dang slow. 
+
+It's great that we want quick feedback ... don't let that lead you into 
+obsessed with the speediness of your test suite. 
 
 ---
 
-# Run Only What You Need
+# Speed: Worse Alternatives
+
+.center[<img src="https://www.tinypulse.com/hs-fs/hubfs/b40a2331160baece046d108ab53aabb0.jpg" style="width: 70%" />]
 
 ???
 
-Run only tests that you need locally (LEARN HOW TO DO THIS), lean on CI to cover unlikely places being impacted. Remember these suites, store them up, when you notice patterns, maybe that's something you can abstract out into a gem.
-
- 
----
-
-Mind your boundaries. Services classes gems are just different mechanisms to enforce boundaries, count the cost. Sometimes we choose a harder boundary to force decoupling, when if we just tested in isolation more, we could achieve the same thing 
-Sometimes moving code out into its own gem or service will help not only with the boundary, but with minimizing the test suite that needs to be run inside a monolith. Of course, now you’ve opened the door for integration test failures. 
+First, remember that one alternative to your slow automated test suite is a 
+separate
+QA dept that's under-resourced on time and people and you have to wait 3+ weeks
+to get shrug-percent coverage.
 
 
 ---
 
-# Use Tests as a Reminder
+# Speed: Over Mocking
 
-fail “Remember this” if Time.now > ‘2018-02-01’
-
----
-
-# Creative Test Usages
+.center[<img src="bad.mocking.example.png" style="width: 40%"/>]
 
 ???
 
-I've used test automation to scan the test logs after a test suite run looking for credit card 
-number patterns to help ensure we weren't logging them.
+In this contrived example, you can see how tests can pass when they 
+shouldn't, and pursuing too many mocks in the name of speed can 
+deteriorate the quality of your tests.
+
+credit: https://www.thoughtworks.com/insights/blog/mockists-are-dead-long-live-classicists
 
 ---
 
-# Mock Love
+# Speed: Run What You Need
+
+## Bundler:
+
+.one-big.remark-code[ruby bin/rspec spec/bundler/definition_spec.rb spec/resolver/basic_spec.rb]
 
 ???
 
-Consider building a mock service, mock tool. Great for exploratory testing. (eInstruction mock receiver, GameStop mock Microsoft, MSci bulk mailer utility code, these can also fight the darkness)
+The Bundler test suite is not only large and slow, but some of the tests are
+specific to certain platforms and getting the whole thing to run locally can be
+difficult.
+
+My pattern was to use RubyMine to run the specific test my cursor was on, then
+run the current file, then use a shell script like the above to get a wider
+run of feedback from several files, then commit to a branch and let CI tell me
+how things are going broadly.
+
+In cases like this, I usually only run the tests I need to locally, and lean on
+CI to cover the whole thing.
+
+By building out shell scripts like this you can focus on the tests most likely to
+give you the most valuable feedback early. By saving and curating these scripts 
+you can also discover some interesting boundaries of the code base
+that could come in handy when you want to try and break it up into gems or
+services. More on that in a moment.
+
+---
+
+# If Speed Is A Concern
+???
+Some other quick comments on ways to try and increase your speed. 
+--
+.center.one-big-tall[Favor Integration Over Unit]
+???
+skimping on unit tests in favor of integration tests could work.
+--
+.center.one-big-tall[Use Suite-Level Database Fixtures]
+???
+and you can share some database fixtures for a series of related tests.
+--
+.center.one-big-tall[Breakdown Test Runs in Parallel Chunks]
+???
+TravisCI and CircleCI, to name two, offer options here. 
+
+---
+
+# Libraries and Services
+
+.center[![Component Diagram](https://cdn-1.wp.nginx.com/wp-content/uploads/2015/11/Microservices-Cubes-300x300-PMS355.png)] 
+
+???
+
+Mind your boundaries. Services classes gems are just different mechanisms to
+enforce boundaries, count the cost. Sometimes we choose a harder boundary to
+force decoupling, when if we just tested in isolation more, we could achieve
+the same thing Sometimes moving code out into its own gem or service will help
+not only with the boundary, but with minimizing the test suite that needs to be
+run inside a monolith. Of course, now you’ve opened the door for integration
+test failures.
 
 ---
 
 # Test in Production
+???
+There's a difference between putting untested things into production 
+recognizing  
+There's nothing like production. Few shops can afford to pull off a true 
+staging environment (or blue/green deployments).
+--
+.center.four-big[Exploratory]
+
 
 ???
 
-Sometimes the only way to test things in production is to test it in production. Do this judiciously, but recognize when you need it and use feature flags to protect the general user population. Trying to build up a staging environment that’s just like production so I don’t need to test in production can be a big distraction.
-Make sure you can revert quickly. Rescue nil can be your friend when judiciously used in cases like this - but only temporarily.
+Sometimes the only way to test things in production is to test it in
+production. Do this judiciously, but recognize when you need it and use feature
+flags to protect the general user population. Trying to build up a staging
+environment that’s just like production so I don’t need to test in production
+can be a big distraction. Make sure you can revert quickly. Rescue nil can be
+your friend when judiciously used in cases like this - but only temporarily.
+
+---
+
+# Palate Cleanser
+
+.center[![Lemon Sorbet](https://s3.amazonaws.com/spoonuniversi-wpengine/spoonuniversi/wp-content/uploads/sites/66/2016/07/LemonSorbet_Rodgers_FeaturedImage.jpg)]
+
+???
+Ok, enough about testing.
 
 ---
 
@@ -276,7 +404,12 @@ Make sure you can revert quickly. Rescue nil can be your friend when judiciously
 
 When in Branson … https://i.pinimg.com/474x/1c/d3/51/1cd3515613f1213dd47375c71bd2aa9d--branson-missouri-redneck.jpg
 ???
-If you work in an OOP language, know your OOP. SOLID principles. Sandi Metz. Go with the grain. This isn’t so much about short term productivity, but buying you long term flexibility. Know your basic refactorings - if nothing else, know that most refactorings have an opposite. This is the more artsy side of engineering.
+
+If you work in an OOP language, know your OOP. SOLID principles. Sandi Metz. Go
+with the grain. This isn’t so much about short term productivity, but buying
+you long term flexibility. Know your basic refactorings - if nothing else, know
+that most refactorings have an opposite. This is the more artsy side of
+engineering.
 
 
 ---
@@ -285,7 +418,9 @@ If you work in an OOP language, know your OOP. SOLID principles. Sandi Metz. Go 
 
 ???
 
-It’s a time waster. It clogs your IDE, it gets included in grep results and can waste time doing analysis on stuff that’s not even used anymore. Production code coverage tools are a thing. https://github.com/danmayer/coverband
+It’s a time waster. It clogs your IDE, it gets included in grep results and can
+waste time doing analysis on stuff that’s not even used anymore. Production
+code coverage tools are a thing. https://github.com/danmayer/coverband
 
 ---
 
@@ -293,7 +428,9 @@ It’s a time waster. It clogs your IDE, it gets included in grep results and ca
 
 ???
 
-Rubber duck in Slack (have a rubber duck room). Rubber duck in your card/ticket. Take a walk and talk out loud like a crazy person. Come up for air, take breaks. 
+Rubber duck in Slack (have a rubber duck room). Rubber duck in your
+card/ticket. Take a walk and talk out loud like a crazy person. Come up for
+air, take breaks.
 
 ---
 
@@ -303,40 +440,57 @@ Pairing can yield interesting insights into how others do things.
 
 ---
 
-# Optimization
-???
-The general consensus on optimization is you shouldn’t optimize early … but it doesn’t hurt to learn some SQL to avoid some obvious places where AR / your option are issuing more queries than are necessary. Keep that SQL logging on. 
-
-
----
-
-
 # Good commit messages
-Explain yo self before you forget yo self.
+.center.one-big[Explain yo self before you forget yo self.]
 ???
-Not just commit messages, code comments, class names, methods, readme. Pay attention to the distance between the code and where the documentation resides. If you need separate docs, maybe you can automate it so the source stays close to the source.
 
+Not just commit messages, code comments, class names, methods, readme. Pay
+attention to the distance between the code and where the documentation resides.
+If you need separate docs, look to automate what you can so the docs stay 
+close to the source.
 
 ---
 
-# Keep (and COMMIT!) your utility code
+# Keep Your Throwaway Code
+
+.center[<img src="1998_samandfriends.jpg" style="width: 50%" />] 
+
 ???
 
-This is one habit I don’t see often enough. At LivingSocial, our ops folks were really good about ensuring console history was kept after someone left. That’s great. Except that if I’m taking the time to write it in the first place, stash it somewhere, commit it. You won’t come back to all of it, but that stuff you will come back to can be refined and iterated on, and eventually some of it will make it into the production codebase.
+Unlike your desktop and closet, we essentially have unlimited
+
+Keep and commit all of the code you use when troubleshooting something or doing
+routine tasks.
+
+This is one habit I don’t see often enough. At LivingSocial, our ops folks were
+really good about ensuring console history was kept after someone left. That’s
+great. Except that if I’m taking the time to write it in the first place, then
+I should stash it somewhere, commit it. You won’t come back to all of it, you
+may not even come back to most of it, but the stuff you will come back to can
+be refined and iterated on, and eventually some of it will make it into the
+production codebase.
 
 ---
-# DON’T DO THINGS MANUALLY
-Automate yo self before you continue to do the same ol' damn thing over and over again until you 
-give carpel tunnel to yo self.
+# DRY: Manual Labor
+
+.center.one-big-tall[Automate yo self before you continue to do the same ol' damn thing over and over again until you 
+give carpel tunnel to yo self.]
 ???
-As much as we love automation, it’s amazing how often we’ll still get into cesspools of manual labor.
+
+As much as we love automation, it’s amazing how often we’ll still get into
+cesspools of manual labor. One reason why it can be invaluable to rotate team
+members into a part of a codebase or work routine, so they can notice the
+stale, wasteful habits we all accrue and help us automate away our manual
+crutches.
 
 ---
 
 
-# Hack in production
+# Hack in Production
 ???
-Put the code in an editor. Use a redefinition of the class to copy/paste code into prod console to play with it there. But then Keep it!
+
+Put the code in an editor. Use a redefinition of the class to copy/paste code
+into prod console to play with it there. But then Keep it!
 
 ---
 

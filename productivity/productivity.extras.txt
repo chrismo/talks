@@ -1,0 +1,29 @@
+Original slide ideas cut for time or underwhelming content...
+
+---
+
+# Creative: Tests as a Reminder
+
+.center.one-big.remark-code[ fail "Remember" if Time.now > Time.parse('1605-11-05') ]
+
+---
+
+# Creative: Scan Test Output
+
+![hey](https://www.peerlesscredit.com/wp-content/uploads/2013/10/CreditCard.png)
+
+???
+
+I've used test automation to scan the test logs after a test suite run looking
+for credit card number patterns to help ensure we weren't logging them.
+
+---
+
+# Mock Love
+
+???
+
+Consider building a mock service, mock tool. Great for exploratory testing.
+(eInstruction mock receiver, GameStop mock Microsoft, MSci bulk mailer utility
+code, these can also fight the darkness)
+
