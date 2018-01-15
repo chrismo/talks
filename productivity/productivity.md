@@ -518,7 +518,7 @@ conditional with polymorphism" refactoring.
 
 ???
 
-It’s a time waster. It clogs your IDE, it gets included in grep results and can
+It’s a time waster. It clogs your editor, it gets included in grep results and can
 waste time doing analysis on stuff that’s not even used anymore, not to mention
 wasting time running tests over code that's out of action. Production
 code coverage tools are a thing. 
