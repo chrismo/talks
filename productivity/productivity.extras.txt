@@ -27,3 +27,17 @@ Consider building a mock service, mock tool. Great for exploratory testing.
 (eInstruction mock receiver, GameStop mock Microsoft, MSci bulk mailer utility
 code, these can also fight the darkness)
 
+---
+
+# Hack in Production
+???
+
+Put the code in an editor. Use a redefinition of the class to copy/paste code
+into prod console to play with it there. But then Keep it!
+
+---
+
+# Build the Light
+Dark is the default.
+
+
