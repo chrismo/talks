@@ -3,6 +3,13 @@ layout: false
 class: center, middle
 
 ## Habits of a 2.76x Developer
+???
+
+TODO: 
+- Disable OS notifications.
+- Shut down other apps.
+- Adjust the presenter notes font size. 
+- Reload, then Clone (`c` shortcut).
 ---
 class: center, middle
 
@@ -18,7 +25,8 @@ currently the Director of Engineering at Mystery Science, before that I spent
 team member of Bundler, but I haven't contributed there in a while.
 
 This is a new talk, I appreciate y'all letting me try it out here, would love
-your feedback on it.
+your feedback on it. It's mostly tech agnostic, but as I've been a die-hard 
+Rubyist for ever, Ruby will get a little bias. 
 
 Before we get going, some shout-outs:
 
@@ -62,7 +70,7 @@ you know who struggles with mental issues.
 ???
 
 Then finally, a shout out to the classic Pragmatic Programmer book since a lot
-of the stuff in my talk is either ripped off from or inspired by this book.
+of the stuff in my talk is inspired by or ripped off from this book.
 
 ---
 
@@ -72,6 +80,10 @@ class: center, middle
 .center[<img src="10x.programmer.png"/>]
 
 ???
+
+If you don't know, a 10x developer is a developer who is an order of magnitude
+more productive than an average developer. Its existence has sparked many 
+debates over the years. 
 
 The idea of a 10x developer can at least be traced back to a 1996 book by Steve
 McConnell called Rapid Development and possibly the 1st edition in 1993 of his
@@ -223,6 +235,9 @@ David Brady tweeted this recently - Do you really think testing is good? ...
 I'm starting to feel like we think testing sucks. ... Is it good, or just
 an accepted evil? 
 
+And a lot of the conversation was around the eventual pay-off of these tests
+down the road. 
+
 https://twitter.com/dbrady/status/951546028079091712
 --
 
@@ -231,7 +246,8 @@ Tests help me think about and even shape the design of my production code.
 Built-in rubber duck. /me is happy :)]
 
 ???
-I replied that Tests help me think about and even shape the design of my
+But I answered that Tests are valuable to me immediately, because they help 
+me think about and even shape the design of my
 production code. It has a built-in rubber duck effect.
 
 https://twitter.com/the_chrismo/status/951587076138442752
@@ -332,7 +348,8 @@ Our test suites are a huge, automated pre-deploy checklist.
 ???
 
 I did just say "huge" - and this transitions us to one common problem with
-test suites: they just run so dang slow. 
+test suites: they just run so dang slow and get slower with every test we
+add. 
 
 It's great that we want quick feedback ... but don't let that lead you into 
 being obsessed with the speediness of your test suite. 
@@ -349,8 +366,9 @@ First, remember that one alternative to your slow automated test suite is a
 separate QA dept that's under-resourced on time and people and you have to wait
 3+ weeks to get shrug-percent coverage.
 
-I've worked at many companies like this and there are still many, many places
-that do their QA like this. Remember, failure is always an option.
+I've worked at many companies who operate this way and there are still many, many 
+places out there like it. Just something to keep in mind while waiting for your
+CI build to finish.
 
 ---
 
@@ -379,14 +397,19 @@ credit: https://www.thoughtworks.com/insights/blog/mockists-are-dead-long-live-c
 
 ???
 
+But, we don't just have check our expectations of test speed, there are some
+things we can do to help. 
+
+One practical option, is to lean on your CI.    
+
 The Bundler test suite is not only large and slow, but some of the tests are
 specific to certain platforms and getting the whole thing to run locally can be
 difficult.
 
-In cases like this, I usually only run the tests I need to locally, and lean on
+In cases like this, I usually only run the tests I need to locally, and rely on
 CI to cover the whole thing.
 
-My pattern was to use RubyMine to run the specific test my cursor was on, then
+My usual pattern is to use RubyMine to run the specific test my cursor is on, then
 run the current file, then use a shell script like the one here to get a wider
 run of feedback from several files, then commit to a branch and let CI tell me
 how things are going across-the-board.
@@ -412,9 +435,20 @@ the units are model tests or things that hit the database.
 ???
 and you can share some database fixtures for a series of related tests.
 --
-.center.one-big-tall[Breakup Test Runs in Parallel Chunks]
+.center.one-big-tall[Build out a PO*O Suite]
 ???
-TravisCI and CircleCI, to name two, offer options here. 
+Build out a Plain Ol' Object suite.
+
+If you work in Rails, for example, loading its environment takes time,
+if you're building out plain ol' ruby objects, have a test_helper or
+spec_helper that bypasses your framework if you don't need it. There
+are also tools like Spring that will keep the whole process loaded
+and save you time.
+--
+.center.one-big-tall[Setup Test Runs in Parallel]
+???
+Setup Test Runs in Parallel - TravisCI and CircleCI, to name two, offer 
+options here. 
 
 ---
 
@@ -461,20 +495,20 @@ Ok, enough about testing.
 
 ---
 
-# Refactoring / OOP
+# Love Me Some OOP
 
-.center[When in Branson …] 
+.center.two-big[When in Branson …] 
 .center[![Branson](https://i.pinimg.com/474x/1c/d3/51/1cd3515613f1213dd47375c71bd2aa9d--branson-missouri-redneck.jpg)]
 ???
 
-It's time to refactor. 
+If you work in an object-oriented language, know your OOP. Learn the SOLID 
+principles. Check out anything Sandi Metz has done, it's Ruby flavored but
+applicable to any OO language. When your tests are giving you feedback about 
+design pain, you need to know what your options are. 
 
-If you work in an OOP language, know your OOP. SOLID principles. Sandi Metz. Go
-with the grain. This isn’t so much about short term productivity, but buying
-you long term flexibility. Know your basic refactorings - if nothing else, know
-that most refactorings have an opposite. This is the more artsy side of
-engineering.
-
+Also, have a decent working knowledge of refactoring
+patterns - one in particular I wish most OO devs knew is the "replace 
+conditional with polymorphism" refactoring. 
 
 ---
 
@@ -485,7 +519,8 @@ engineering.
 ???
 
 It’s a time waster. It clogs your IDE, it gets included in grep results and can
-waste time doing analysis on stuff that’s not even used anymore. Production
+waste time doing analysis on stuff that’s not even used anymore, not to mention
+wasting time running tests over code that's out of action. Production
 code coverage tools are a thing. 
 
 ---
@@ -502,38 +537,19 @@ sEYE-th
 
 ---
 
-# Ask for Help
-
-.center[<img src="https://i.pinimg.com/736x/01/42/30/0142309317bb9e11c167a80b8ff40ff6--rubber-duck-lip-products.jpg" style="width: 50%" />]
-
-???
-
-Rubber duck in Slack (have a rubber duck room). Rubber duck in your card/ticket
-(also an excellent way to capture progress for yourself or stakeholders). Take
-a walk and talk out loud like a crazy person. Actually talk to another human
-being.
-
-Inviting other parts of your brain to the conversation can get you unstuck.
-
----
-
-# Pair
-
-.center[<img src="https://i.pinimg.com/736x/01/42/30/0142309317bb9e11c167a80b8ff40ff6--rubber-duck-lip-products.jpg" style="width: 33%" />
-        <img src="https://i.pinimg.com/736x/01/42/30/0142309317bb9e11c167a80b8ff40ff6--rubber-duck-lip-products.jpg" style="width: 33%" />]
-
-???
-
-Pairing can yield interesting insights into how others do things. 
-
----
-
-# Good commit messages
+# Good Commit Messages
 .center.one-big[Explain yo self before you forget yo self.]
 ???
 
-Not just commit messages, code comments, class names, methods, readme. Pay
-attention to the distance between the code and where the documentation resides.
+Write good commit messages!
+
+Not just commit messages, code comments (when appropriate), class names, 
+methods, keep the README up-to-date. 
+
+Pay attention to the distance between the code and where the documentation 
+resides. Sometimes we fall into habits of documenting something in a 
+"distant" system when it could just as easily be committed to the codebase. 
+
 If you need separate docs, look to automate what you can so the docs stay 
 close to the source.
 
@@ -574,6 +590,37 @@ crutches.
 
 ---
 
+# Ask for Help
+
+.center[<img src="https://i.pinimg.com/736x/01/42/30/0142309317bb9e11c167a80b8ff40ff6--rubber-duck-lip-products.jpg" style="width: 50%" />]
+
+???
+
+This one is important for myself, I tend to be introverted and stubborn. Talk to
+other human beings! If you don't have any human beings at the ready, use the 
+rubber duck technique. 
+
+In particular, I like to Rubber Duck in slack (though in a room that folks won't
+necessarily get interrupted) or - esp. - in my card or ticket I'm working, as 
+this is an excellent way to capture progress for yourself or stakeholders. Take
+a walk and talk out loud like a crazy person. 
+
+By speaking about or writing about your problem, you can get unstuck faster by
+engaging different parts of your brain.
+
+---
+
+# Pair
+
+.center[<img src="https://i.pinimg.com/736x/01/42/30/0142309317bb9e11c167a80b8ff40ff6--rubber-duck-lip-products.jpg" style="width: 33%" />
+        <img src="https://i.pinimg.com/736x/01/42/30/0142309317bb9e11c167a80b8ff40ff6--rubber-duck-lip-products.jpg" style="width: 33%" />]
+
+???
+
+Pairing can yield interesting insights into how others do things. 
+
+---
+
 class: center, middle
 
 # `¯\_(ツ)_/¯`x Developers
@@ -594,8 +641,10 @@ class: center, middle
 
 ???
 
-since Google did that study showing that Psychological Safety is the most
-important factor for productive teams. Which I happen to agree with. 
+since Google did that study a few years ago showing that Psychological 
+Safety on a team is the most important factor for productivity. I blogged
+about that, like ... 2 years ago, but it's still on the front page of my
+site - clabs.org - you can check that out there. 
 
 ---
 
@@ -607,6 +656,6 @@ important factor for productive teams. Which I happen to agree with.
 That's my talk - a final shout-out for 
 
 Mystery Science - we make online science lessons for elementary schools
-that encourage kids to experiment and be curious. Check us out at 
-mysteryscience.com - if you're looking for a gig, hit me up and let's 
-talk. 
+that encourage kids to experiment and be curious and learn the scientific 
+process hands on. Check us out at mysteryscience.com - if you're looking 
+for a gig, hit me up and let's talk. 
