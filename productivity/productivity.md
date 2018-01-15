@@ -663,3 +663,14 @@ Mystery Science - we make online science lessons for elementary schools
 that encourage kids to experiment and be curious and learn the scientific 
 process hands on. Check us out at mysteryscience.com - if you're looking 
 for a gig, hit me up and let's talk. 
+
+books/links: 
+- Healthy Programmer: https://pragprog.com/book/jkthp/the-healthy-programmer
+- OSMI - https://osmihelp.org/ | https://forums.osmihelp.org/
+- Pragmatic Programmer: https://pragprog.com/book/tpp/the-pragmatic-programmer
+- The Leprechauns of Software Engineering: https://leanpub.com/leprechauns
+- XKCD Comic: https://xkcd.com/974/ (also - https://xkcd.com/1205/)
+- https://github.com/danmayer/coverband
+- https://github.com/michaelfeathers/scythe
+- https://pypi.python.org/pypi/vulture
+- bio-links: clabs.org / https://twitter.com/the_chrismo / www.mysteryscience.com 
