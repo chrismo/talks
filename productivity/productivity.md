@@ -533,6 +533,8 @@ code coverage tools are a thing.
 
 .center.one-big-tall[https://github.com/michaelfeathers/scythe]
 
+.center.one-big-tall[https://pypi.python.org/pypi/vulture]
+
 ???
 
 sEYE-th
