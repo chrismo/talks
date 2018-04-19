@@ -2,18 +2,31 @@
 layout: false
 class: center, middle
 
+.center[<i>Slide courtesy of Ernie Miller</i>]
+.center[<hr width="20%" />]
+.center[<img src="how.to.look.cool.png" width="80%" />]
+
 ???
 
 TODO: 
 - Disable OS notifications.
 - Shut down other apps.
+- Turn off f.lux
 - Reload, then Clone (`c` shortcut).
 - Adjust the presenter notes font size. 
+
+---
+
+layout: false
+class: center, middle
+
+???
 
 Before I get going, given the current state of things with the internet these
 days, concerns about privacy and folks struggling to have control over their
 own information, I just need to say this: everything I’m about to say is off
 the record.
+
 
 ---
 
@@ -45,7 +58,7 @@ class: center, middle
 This is my profile on GitHub. I’m not showing this to you to brag about the
 huge number of repos I’ve forked and never done anything with, nor is it to
 share my joy over it being the only online service where I’ve been able to
-obtain my preferred login name without having to resort to creativity.
+obtain my preferred username without having to resort to creativity.
 
 ---
 
@@ -128,9 +141,8 @@ class: center, middle
 ???
 
 5-and-a-half years ago, not on this very spot, at RubyConf, a wonderful
-documentary on _why by Kevin Triplett was shown, but we don't have time to show
-it, this is a lightning talk, I don't even have time to talk about the trailer,
-so we'll just skip to the part
+documentary on _why by Kevin Triplett was shown, but we don't have time to even
+talk about it, this is a lightning talk, so we'll just skip to the part
 
 ---
 
@@ -182,7 +194,7 @@ class: center, middle
 
 and start saying chunky bacon.
 
-So ... who's into conspiracies? Don't raise your hands you fools! 
+So ... [ENUNCIATE!] who's into conspiracies? Don't raise your hands you fools! 
 That's what they *want* you to do.
 
 or y'all are lying and your refusal to participate is clearly a
@@ -231,8 +243,17 @@ class: center, middle
 
 “Lipy Bacon”.
 
-Now ... .... I have no idea what that is - but LOOK AT THIS.
+---
 
+class: center, middle
+
+.center[<img src="translate.lipy.bacon.png" width="100%" />]
+
+???
+
+“Lipy Bacon”.
+
+Now ... .... I have no idea what that is - but LOOK AT THIS.
  
 ---
 
@@ -324,7 +345,7 @@ class: center, middle
 
 ???
 
-hmmmmmm
+though that does give me another username option
  
 ---
 
@@ -456,7 +477,7 @@ am unveiling wicswac.org:
 
 class: center, middle
 
-.center[<img src="wicswac.org.png" width="50%" />]
+.center[<img src="wicswac.org.png" width="80%" />]
 
 ???
 
