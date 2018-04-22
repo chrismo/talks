@@ -8,6 +8,7 @@
         @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
         @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
         @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+        @import url(index.css);
 
         body {
             font-family: 'Sorts Mill Goudy';
@@ -19,7 +20,9 @@
             font-weight: normal;
         }
 
-        .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+        .remark-code, .remark-inline-code {
+            font-family: 'Ubuntu Mono';
+        }
 
         .inverse {
             color: #dddddd;
@@ -57,18 +60,56 @@
     </style>
 </head>
 <body>
-<div align="center">
-    <h1><b>cLabs Talks</b></h1>
+<main>
 
-    <hr/>
-    <h2><a href="http://clabs.org/blog/TechnicalIntimidation">Technical Intimidation</a></h2>
-    <h2><a href="https://www.youtube.com/watch?v=fWLzNRF5YZI">How Not to Make a Custom Renderer in Rails</a></h2>
-    <br/>
-    <hr width="20%"/>
-    <br/>
-    <h2><a href="elegance/elegance.html">In Search of Elegance</a><br/> (slides)</h2>
-    <h2><a href="estimation/estimation.html">Vague Estimates are Vague</a><br/> (slides)</h2>
-    <h2><a href="wicswac/wicswac.html">Be Chunky</a><br/> (slides)</h2>
-</div>
+
+    <div class="box article big-article">
+        <article style="background-image: url(img/allthethings.png)">
+            <div class="content">
+                <h2>Technical Intimidation</h2>
+                <span class="genre"><a href="http://clabs.org/blog/TechnicalIntimidation">Article</a></span><br>
+                <span class="genre"><a
+                        href="https://www.youtube.com/watch?v=i4cryg-q_YM">Video (RailsConf 2013)</a></span>
+            </div>
+        </article>
+    </div>
+    <div class="box article">
+        <article style="background-image: url(img/sup.png)">
+            <div class="content">
+                <h2>How Not to Make a Custom Renderer in Rails</h2>
+                <span class="genre"><a
+                        href="https://www.youtube.com/watch?v=fWLzNRF5YZI">Video (Big Ruby 2013)</a></span>
+            </div>
+        </article>
+    </div>
+    <div class="box article big-article">
+        <article style="background-image: url(img/elegance.png)">
+            <div class="content">
+                <h2>In Search of Elegance</h2>
+                <span class="genre"><a href="https://youtu.be/MPi6O-KlHEk">Video</a></span><br/>
+                <span class="genre"><a href="elegance/elegance.html">Slides</a></span>
+            </div>
+        </article>
+    </div>
+    <div class="box article big-article">
+        <article style="background-image: url(estimation/blew.away.jpg)">
+            <div class="content">
+                <h2>No Number Estimates</h2>
+                <span class="genre"><a href="https://youtu.be/sofW9CsdiaA">Video</a></span><br/>
+                <span class="genre"><a href="estimation/estimation.html">Slides</a></span>
+            </div>
+        </article>
+    </div>
+    <div class="box article">
+        <article style="background-image: url(wicswac/wicswac.org.png)">
+            <div class="content">
+                <h2>wicswac</h2>
+                <span class="genre">Video (RailsConf 2018) <i>coming soon...</i></span><br/>
+                <span class="genre"><a href="wicswac/wicswac.html">Slides</a></span>
+            </div>
+        </article>
+    </div>
+
+</main>
 </body>
 </html>
